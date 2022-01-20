@@ -8,7 +8,7 @@
       <div>{{ $store.state.email }}</div>
       <div class="telefone">{{ $store.state.telefone }}</div>
       <div class="logos">
-        <img width="130px" src="@/assets/img/fiec.png" alt="">
+        <img class="fiec" width="130px" src="@/assets/img/fiec.png" alt="">
         <img width="130px" src="@/assets/img/senai.png" alt="">
       </div>
     </div>
@@ -35,6 +35,7 @@ export default {
       // the canvas.
       const options = {
         type: "dataURL",
+        scale: 2
       };
       this.output = await this.$html2canvas(el, options);
       this.gerouImagem = true
@@ -73,7 +74,11 @@ export default {
 
 .logos{
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+}
+
+.fiec{
+  margin-right: 15px;
 }
 
 </style>
